@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Zen Zoom Tab Closer",
+  "version": "1.0.0",
+  "description": "Automatically closes Zoom tabs ending with '#success' after 5 seconds. Minimal permissions for maximum security.",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  }
+}
+
