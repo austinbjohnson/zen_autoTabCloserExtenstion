@@ -29,19 +29,27 @@ When you join a Zoom meeting from your browser, Zoom opens a tab that redirects 
 
 For personal use without Mozilla signing:
 
-1. **Firefox Developer Edition or Nightly** (recommended for unsigned extensions):
-   - Download [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
+1. **Clone or download this repository**:
+   ```bash
+   git clone https://github.com/austinbjohnson/zen_zoomTabCloserExtenstion.git
+   cd zen_zoomTabCloserExtenstion
+   ```
+
+2. **Build the extension package**:
+   
+   **Note**: The `.xpi` file is not included in the repository to prevent corruption. Build it yourself:
+   
+   ```bash
+   zip -r zen-zoom-tab-closer.xpi manifest.json background.js icons/
+   ```
+
+3. **Configure Firefox** (for unsigned extensions):
+   - Use [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) or Firefox Nightly
    - Navigate to `about:config`
    - Search for `xpinstall.signatures.required`
    - Set it to `false`
 
-2. **Create a ZIP file** of the extension:
-   ```bash
-   cd /path/to/zen_zoomAppTabCloser
-   zip -r zen-zoom-tab-closer.xpi manifest.json background.js icons/
-   ```
-
-3. **Install the extension**:
+4. **Install the extension**:
    - Open Firefox and go to `about:addons`
    - Click the gear icon ⚙️ and select **"Install Add-on From File..."**
    - Select your `zen-zoom-tab-closer.xpi` file

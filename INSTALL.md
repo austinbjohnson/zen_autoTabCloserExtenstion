@@ -12,14 +12,22 @@
 
 ## For Personal Use (Permanent)
 
-### Step 1: Create the Extension Package
+### Step 1: Clone or Download the Repository
 
 ```bash
-cd /Users/ajohnson/Code/zen_zoomAppTabCloser
+git clone https://github.com/austinbjohnson/zen_zoomTabCloserExtenstion.git
+cd zen_zoomTabCloserExtenstion
+```
+
+### Step 2: Build the Extension Package
+
+**Note**: The `.xpi` file is not included in the repository to prevent corruption. You need to build it yourself:
+
+```bash
 zip -r zen-zoom-tab-closer.xpi manifest.json background.js icons/
 ```
 
-### Step 2: Install in Firefox
+### Step 3: Install in Firefox
 
 1. Open Firefox and go to `about:addons`
 2. Click the gear icon ⚙️ (top right)
@@ -29,7 +37,7 @@ zip -r zen-zoom-tab-closer.xpi manifest.json background.js icons/
 
 **Note**: Firefox may warn about unsigned extensions. This is normal for self-made extensions.
 
-### Step 3: Test It
+### Step 4: Test It
 
 1. Join a Zoom meeting from your browser
 2. Watch as the `#success` tab automatically closes after 5 seconds!
