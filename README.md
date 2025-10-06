@@ -123,4 +123,3 @@ MIT License - Feel free to modify and use as you wish!
   - Automatically closes Zoom `#success` tabs after 5 seconds
   - Minimal permissions (tabs only)
   - Console logging for debugging
-
