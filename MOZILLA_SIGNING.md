@@ -32,7 +32,7 @@ You'll need to provide:
 
 - **Extension Name**: Zen Auto Tab Closer
 - **Version**: 1.1.0
-- **Description**: Automatically closes Zoom '#success' tabs (5s) and Slack thread tabs (10s). Minimal permissions for maximum security.
+- **Description**: Automatically closes Zoom '#success' tabs (3s) and Slack thread tabs (10s). Minimal permissions for maximum security.
 - **Category**: Privacy & Security (or Productivity)
 - **License**: MIT (or your preference)
 
