@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Zen Zoom Tab Closer",
-  "version": "1.0.0",
-  "description": "Automatically closes Zoom tabs ending with '#success' after 5 seconds. Minimal permissions for maximum security.",
+  "name": "Zen Auto Tab Closer",
+  "version": "1.1.0",
+  "description": "Automatically closes Zoom '#success' tabs (3s) and Slack thread tabs (10s). Minimal permissions for maximum security.",
   "permissions": [
     "tabs"
   ],
