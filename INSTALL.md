@@ -15,8 +15,8 @@
 ### Step 1: Clone or Download the Repository
 
 ```bash
-git clone https://github.com/austinbjohnson/zen_zoomTabCloserExtenstion.git
-cd zen_zoomTabCloserExtenstion
+git clone https://github.com/austinbjohnson/zen_autoTabCloser.git
+cd zen_autoTabCloser
 ```
 
 ### Step 2: Build the Extension Package
@@ -24,7 +24,7 @@ cd zen_zoomTabCloserExtenstion
 **Note**: The `.xpi` file is not included in the repository to prevent corruption. You need to build it yourself:
 
 ```bash
-zip -r zen-zoom-tab-closer.xpi manifest.json background.js icons/
+zip -r zen-auto-tab-closer.xpi manifest.json background.js icons/
 ```
 
 ### Step 3: Install in Firefox
@@ -32,15 +32,15 @@ zip -r zen-zoom-tab-closer.xpi manifest.json background.js icons/
 1. Open Firefox and go to `about:addons`
 2. Click the gear icon ⚙️ (top right)
 3. Select **"Install Add-on From File..."**
-4. Choose the `zen-zoom-tab-closer.xpi` file
+4. Choose the `zen-auto-tab-closer.xpi` file
 5. Click **"Add"** when prompted
 
 **Note**: Firefox may warn about unsigned extensions. This is normal for self-made extensions.
 
 ### Step 4: Test It
 
-1. Join a Zoom meeting from your browser
-2. Watch as the `#success` tab automatically closes after 5 seconds!
+1. Join a Zoom meeting from your browser - watch as the `#success` tab automatically closes after 5 seconds
+2. Open a Slack thread link - watch as it automatically closes after 10 seconds
 
 ---
 
@@ -55,17 +55,17 @@ zip -r zen-zoom-tab-closer.xpi manifest.json background.js icons/
 **Extension not working?**
 
 - Check the Browser Console: `Ctrl+Shift+J` (Windows/Linux) or `Cmd+Shift+J` (Mac)
-- Look for `[Zen Zoom Tab Closer]` messages
+- Look for `[Zen Auto Tab Closer]` messages
 
 ---
 
 ## Quick Settings
 
-Want to change the 5-second delay? Edit `background.js`:
+Want to change the delays? Edit `background.js`:
 
 ```javascript
-const CLOSE_DELAY = 5000; // Change this (in milliseconds)
+const ZOOM_CLOSE_DELAY = 5000; // Zoom tabs (in milliseconds)
+const SLACK_CLOSE_DELAY = 10000; // Slack tabs (in milliseconds)
 ```
 
 After changes, reload the extension in `about:debugging` or reinstall.
-
