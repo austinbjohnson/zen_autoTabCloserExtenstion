@@ -1,7 +1,7 @@
 # Zen Auto Tab Closer
 
 A lightweight, privacy-focused Firefox extension that automatically closes:
-- Zoom tabs ending with `#success` after 5 seconds
+- Zoom tabs ending with `#success` after 3 seconds
 - Slack thread tabs after 10 seconds
 
 ## Why This Extension?
@@ -13,7 +13,7 @@ When you join a Zoom meeting from your browser, Zoom opens a tab that redirects 
 - **Minimal Permissions**: Only requires `tabs` permission - no access to page content or network requests
 - **Lightweight**: Simple background script with no dependencies
 - **Configurable Delays**:
-  - 5-second delay for Zoom tabs (quickly removes success tabs)
+  - 3-second delay for Zoom tabs (quickly removes success tabs)
   - 10-second delay for Slack threads (gives you time to check if you need the tab)
 - **Universal Slack Support**: Works with any Slack workspace (not tied to specific domains)
 - **Privacy-First**: No data collection, no external communication, completely local
@@ -75,7 +75,7 @@ The extension monitors all tab URL changes in Firefox. When it detects:
 
 **Zoom tabs:**
 - URL containing `zoom.us` AND ending with `#success`
-- Waits 5 seconds, then automatically closes the tab
+- Waits 3 seconds, then automatically closes the tab
 
 **Slack thread tabs:**
 - URL matching pattern `*.slack.com/archives/[CHANNEL_ID]/p[MESSAGE_ID]`
@@ -88,7 +88,7 @@ The extension monitors all tab URL changes in Firefox. When it detects:
 Edit `background.js` and modify the delay constants:
 
 ```javascript
-const ZOOM_CLOSE_DELAY = 5000; // Change to desired milliseconds (e.g., 10000 = 10 seconds)
+const ZOOM_CLOSE_DELAY = 3000; // Change to desired milliseconds (e.g., 10000 = 10 seconds)
 const SLACK_CLOSE_DELAY = 10000; // Change to desired milliseconds (e.g., 30000 = 30 seconds)
 ```
 
@@ -133,7 +133,7 @@ This extension is built with privacy and security as top priorities:
 
 **Tab closes too quickly/slowly:**
 - Adjust the `ZOOM_CLOSE_DELAY` or `SLACK_CLOSE_DELAY` constants in `background.js`
-- Default is 5 seconds for Zoom and 10 seconds for Slack
+- Default is 3 seconds for Zoom and 10 seconds for Slack
 
 **Extension stops working after Firefox restart:**
 - If using temporary installation, you need to reload the extension via `about:debugging` after each restart

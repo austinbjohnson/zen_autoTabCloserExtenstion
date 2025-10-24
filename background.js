@@ -2,7 +2,7 @@
 const scheduledTabs = new Set();
 
 // Delay before closing tab (in milliseconds)
-const ZOOM_CLOSE_DELAY = 5000; // 5 seconds for Zoom tabs
+const ZOOM_CLOSE_DELAY = 3000; // 3 seconds for Zoom tabs
 const SLACK_CLOSE_DELAY = 10000; // 10 seconds for Slack tabs (longer since sometimes used intentionally)
 
 function isSlackThreadUrl(url) {
