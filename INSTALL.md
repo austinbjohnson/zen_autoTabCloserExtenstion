@@ -39,7 +39,7 @@ zip -r zen-auto-tab-closer.xpi manifest.json background.js icons/
 
 ### Step 4: Test It
 
-1. Join a Zoom meeting from your browser - watch as the `#success` tab automatically closes after 5 seconds
+1. Join a Zoom meeting from your browser - watch as the `#success` tab automatically closes after 3 seconds
 2. Open a Slack thread link - watch as it automatically closes after 10 seconds
 
 ---
@@ -64,7 +64,7 @@ zip -r zen-auto-tab-closer.xpi manifest.json background.js icons/
 Want to change the delays? Edit `background.js`:
 
 ```javascript
-const ZOOM_CLOSE_DELAY = 5000; // Zoom tabs (in milliseconds)
+const ZOOM_CLOSE_DELAY = 3000; // Zoom tabs (in milliseconds)
 const SLACK_CLOSE_DELAY = 10000; // Slack tabs (in milliseconds)
 ```
 
